@@ -14,7 +14,7 @@ guide from the docs.
 ## Documentation
 
 Please visit [elastic.co](https://www.elastic.co/guide/en/beats/filebeat/current/index.html)
- for the documentation.
+ for the documentation.m
 
 # Docker Filebeat 5.x
 
