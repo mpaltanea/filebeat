@@ -14,7 +14,7 @@ guide from the docs.
 ## Documentation
 
 Please visit [elastic.co](https://www.elastic.co/guide/en/beats/filebeat/current/index.html)
- for the documentation.m
+ for the documentation.
 
 # Docker Filebeat 5.x
 
@@ -33,5 +33,9 @@ Filebeat 5.x Docker image. debian:jessie.
     docker build -t "szagoret/filebeat" .
 	docker run -e ELASTIC_HOST=[localhost] -v [/path/to/logs]:/filebeat-logs -it --name my-filebeat szagoret/filebeat
     
+## or just run
+    
+    docker run -e ELASTIC_HOST=[localhost] -v [/path/to/logs]:/filebeat-logs -it --name my-filebeat szagoret/filebeat
+
 ## Official Docs
     https://www.elastic.co/guide/en/beats/filebeat/current/index.html
