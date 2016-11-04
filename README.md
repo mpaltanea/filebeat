@@ -31,11 +31,11 @@ Filebeat 5.x Docker image. debian:jessie.
 # Build and run
     
     docker build -t "szagoret/filebeat" .
-	docker run -e ELASTIC_HOST=[localhost] -v [/path/to/logs]:/filebeat-logs -it --name my-filebeat szagoret/filebeat
+	docker run -e LOGSTASH_HOST=[localhost] -v [/path/to/logs]:/filebeat-logs -it --name my-filebeat szagoret/filebeat
     
 ## or just run
     
-    docker run -e ELASTIC_HOST=[localhost] -v [/path/to/logs]:/filebeat-logs -it --name my-filebeat szagoret/filebeat
+    docker run -e LOGSTASH_HOST=[localhost] -v [/path/to/logs]:/filebeat-logs -it --name my-filebeat szagoret/filebeat
 
 ## Official Docs
     https://www.elastic.co/guide/en/beats/filebeat/current/index.html
