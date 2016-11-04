@@ -7,7 +7,7 @@ set -e
     VALUE=$2
     sed -i "s/{{$KEY}}/$VALUE/g" /filebeat.yml
   }
-#set ELASTIC_HOST from environment variable
-#ex.: -e ELASTIC_HOST=localhost
-setConfiguration "ELASTIC_HOST" $ELASTIC_HOST
+#set LOGSTASH_HOST from environment variable
+#ex.: -e LOGSTASH_HOST=localhost
+setConfiguration "LOGSTASH_HOST" $LOGSTASH_HOST
 exec "$@"

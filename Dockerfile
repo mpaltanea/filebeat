@@ -1,7 +1,7 @@
 FROM debian:jessie
 
-#default ELASTIC_HOST variable
-ENV ELASTIC_HOST localhost
+#default LOGSTASH_HOST variable
+ENV LOGSTASH_HOST localhost
 
 #install nano && dos2unix to
 #convert line lndings during build

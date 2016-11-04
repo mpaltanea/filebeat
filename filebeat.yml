@@ -41,20 +41,22 @@ filebeat.prospectors:
   #  review: 1
 
   ### Multiline options
-
+    #multiline.pattern: '^[[:space:]]+|^Caused by:'
+   # multiline.negate: false
+    #multiline.match: after
   # Mutiline can be used for log messages spanning multiple lines. This is common
   # for Java Stack Traces or C-Line Continuation
 
   # The regexp Pattern that has to be matched. The example pattern matches all lines starting with [
-  #multiline.pattern: ^\[
+  multiline.pattern: '^[[:space:]]+|^Caused by:'
 
   # Defines if the pattern set under pattern should be negated or not. Default is false.
-  #multiline.negate: false
+  multiline.negate: false
 
   # Match can be set to "after" or "before". It is used to define if lines should be append to a pattern
   # that was (not) matched before or after or as long as a pattern is not matched based on negate.
   # Note: After is the equivalent to previous and before is the equivalent to to next in Logstash
-  #multiline.match: after
+  multiline.match: after
 
 
 #================================ General =====================================
@@ -78,10 +80,10 @@ filebeat.prospectors:
 # Multiple outputs may be used.
 
 #-------------------------- Elasticsearch output ------------------------------
-output:
-    elasticsearch:
+#output:
+    #elasticsearch:
    # Array of hosts to connect to.
-        hosts: ["{{ELASTIC_HOST}}:9200"]
+       # hosts: ["{{ELASTIC_HOST}}:9200"]
 
   # Optional protocol and basic auth credentials.
   #protocol: "https"
@@ -89,9 +91,9 @@ output:
   #password: "changeme"
 
 #----------------------------- Logstash output --------------------------------
-#output.logstash:
+output.logstash:
   # The Logstash hosts
-  #hosts: ["localhost:5044"]
+  hosts: ["{{LOGSTASH_HOST}}:5044"]
 
   # Optional SSL. By default is off.
   # List of root certificates for HTTPS server verifications
